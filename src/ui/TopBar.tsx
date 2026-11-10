@@ -14,7 +14,7 @@ export function Identity() {
   return (
     <>
       <header className="ds-identity">
-        <h1 className="ds-title">Dental Scope</h1>
+        <h1 className="ds-title">3D Dental Anatomy</h1>
         <p className="ds-credit">
           <button type="button" aria-haspopup="dialog" onClick={() => actions.openCredits(true)}>{m.credits}</button>
           {REPO_URL && (

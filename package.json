@@ -1,5 +1,5 @@
 {
-  "name": "dental-scope",
+  "name": "brightark-dental-anatomy",
   "private": true,
   "version": "0.1.0",
   "description": "Explore dental anatomy in 3D — an open-source interactive dental anatomy explorer.",
@@ -19,7 +19,6 @@
     "assets:fetch": "node tools/pipeline/fetch_bodyparts3d.mjs"
   },
   "dependencies": {
-    "@fontsource-variable/source-serif-4": "^5.3.0",
     "@fontsource/inter-tight": "^5.3.0",
     "@fontsource/jetbrains-mono": "^5.3.0",
     "@vercel/analytics": "^2.0.1",
