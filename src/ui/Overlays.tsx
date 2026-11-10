@@ -95,6 +95,18 @@ export function Footer() {
         <a className="ds-link-btn" href={aboutPageHref(lang)}>
           {m.about}
         </a>
+        {' · '}
+        <button type="button" className="ds-link-btn" aria-haspopup="dialog" onClick={() => actions.openCredits(true)}>
+          {m.credits}
+        </button>
+        {REPO_URL && (
+          <>
+            {' · '}
+            <a className="ds-link-btn" href={REPO_URL} target="_blank" rel="noopener noreferrer" aria-label={m.supportRepoAria}>
+              {m.supportRepo}
+            </a>
+          </>
+        )}
       </p>
     </footer>
   );

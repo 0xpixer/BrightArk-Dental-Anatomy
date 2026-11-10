@@ -1,28 +1,17 @@
 import { useLayoutEffect, useRef, useState, type CSSProperties, type RefObject } from 'react';
 import { NUMBERING_LABEL, NUMBERING_SHORT, NUMBERING_SYSTEMS } from '../anatomy/notation';
-import { REPO_URL } from '../app/repo';
 import { useT } from '../i18n';
 import { actions, useApp } from '../state/store';
 import { MODES, QUIZ_MODE, switchMode } from '../modes/modes';
 import { useServices } from './context';
-import { IconClose, IconExternal, IconInfo, IconMoon, IconSearch, IconSun, IconPlay, IconChevron } from './icons';
+import { IconClose, IconInfo, IconMoon, IconSearch, IconSun, IconPlay, IconChevron } from './icons';
 import { TOUR_TEXT } from '../i18n/tour';
 
 export function Identity() {
-  const m = useT();
   return (
     <>
       <header className="ds-identity">
         <h1 className="ds-title">3D Dental Anatomy</h1>
-        <p className="ds-credit">
-          <button type="button" aria-haspopup="dialog" onClick={() => actions.openCredits(true)}>{m.credits}</button>
-          {REPO_URL && (
-            <a href={REPO_URL} target="_blank" rel="noopener noreferrer" aria-label={m.supportRepoAria}>
-              {m.supportRepo}
-              <IconExternal size={11} />
-            </a>
-          )}
-        </p>
       </header>
     </>
   );
