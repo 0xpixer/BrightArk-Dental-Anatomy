@@ -5,7 +5,7 @@ import { Registry } from './anatomy/registry';
 import { loadManifest } from './engine/assets';
 import { Engine } from './engine/Engine';
 import { buildIndex } from './search/search';
-import { getState, restorePreferences } from './state/store';
+import { actions, getState, restorePreferences } from './state/store';
 import { App } from './ui/App';
 import { ServicesContext } from './ui/context';
 import { t } from './i18n';
@@ -22,6 +22,7 @@ inject();
 
 async function boot() {
   restorePreferences();
+  actions.setLang('en');
   document.documentElement.lang = getState().lang;
   const root = createRoot(document.getElementById('root')!);
   if (!hasWebGL()) {

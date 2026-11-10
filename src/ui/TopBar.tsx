@@ -7,7 +7,6 @@ import { MODES, QUIZ_MODE, switchMode } from '../modes/modes';
 import { useServices } from './context';
 import { IconClose, IconExternal, IconInfo, IconMoon, IconSearch, IconSun, IconPlay, IconChevron } from './icons';
 import { TOUR_TEXT } from '../i18n/tour';
-import { LanguageSwitcher } from './LanguageSwitcher';
 
 export function Identity() {
   const m = useT();
@@ -37,7 +36,6 @@ export function TopActions() {
   return (
     <div className={`ds-top-actions${guideCollapsed ? ' is-guide-collapsed' : ''}`}>
       <ModeSwitch />
-      <LanguageSwitcher />
       <NumberingControls />
       <button type="button" data-tour="search" className="ds-search-trigger" onClick={() => actions.openSearch(true)} aria-label={m.searchAnatomy} aria-keyshortcuts="/">
         <IconSearch />
